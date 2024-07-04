@@ -1,3 +1,4 @@
 
-# Geometric-data-of-different-facial-gesture-using-MediaPipe-FaceMash-API
+Thesis Topic : Real-Time Confidence Detection in Facial Expressions during online Interaction
 
+A state-of-the-art technique called "Real-Time Confidence Detection in Facial Expressions during online Interaction" uses sophisticated facial recognition algorithms to instantly examine and decipher users' facial emotions during online conversations. The algorithm not only recognizes emotional cues but also evaluates the degree of confidence linked to these displays. Through the application of artificial intelligence, it improves the comprehension of users' emotional states, leading to more complex and adaptable virtual communication. This breakthrough offers a deep level of knowledge into participants' involvement and emotional health, making it a promising tool for digital communication platforms, virtual meetings, and online education.
