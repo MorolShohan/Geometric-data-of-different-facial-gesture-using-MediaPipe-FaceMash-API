@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Include Bulma CSS framework for styling -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link rel="icon" href="favicon.ico">
+  <!-- Include Mediapipe styles -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.1/control_utils.css" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="demo.css" crossorigin="anonymous">
+  <!-- Include Mediapipe camera utilities -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.1/camera_utils.js" crossorigin="anonymous"></script>
+  <!-- Include Mediapipe control utilities -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.1/control_utils.js" crossorigin="anonymous"></script>
+  <!-- Include Mediapipe drawing utilities -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.2/drawing_utils.js" crossorigin="anonymous"></script>
+  <!-- Include Mediapipe Holistic model -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/holistic@0.1/holistic.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="logo.png" alt="Logo">
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="face.html">Face</a>
+        <a class="navbar-item" href="faceMesh.html">Face Mesh</a>
+        <a class="navbar-item" href="hands.html">Hands</a>
+        <a class="navbar-item" href="pose.html">Pose</a>
+        <a class="navbar-item" href="holistic.html">Holistic</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main container for webcam input and output -->
+  <div class="container" style="margin-top: 20px;">
+    <div class="columns">
+      <!-- Column for webcam input -->
+      <div class="column">
+        <article class="panel is-info">
+          <p class="panel-heading">Webcam Input</p>
+          <div class="panel-block">
+            <video class="input_video4" autoplay></video> <!-- Video element for webcam input -->
+          </div>
+        </article>
+      </div>
+      <!-- Column for Mediapipe output -->
+      <div class="column">
+        <article class="panel is-info">
+          <p class="panel-heading">Mediapipe Face, Hands & Pose Detection</p>
+          <div class="panel-block">
+            <canvas class="output4" width="480px" height="480px"></canvas> <!-- Canvas element for Mediapipe output -->
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Loading spinner -->
+    <div class="loading">
+      <div class="spinner"></div>
+    </div>
+    
+    <!-- Start and Stop buttons -->
+    <div class="buttons">
+      <button class="button is-primary" id="startButton">Start</button>
+      <button class="button is-danger" id="stopButton">Stop</button>
+    </div>
+    
+    <div style="visibility: hidden" class="control4"></div>
+
+    <!-- Include the holistic.js and dataHandler.js scripts -->
+    <script type="text/javascript" src="./js/holistic.js"></script>
+    <script type="text/javascript" src="./js/dataHandler.js"></script>
+  </div>
+</body>
+</html>
